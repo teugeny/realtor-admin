@@ -1,0 +1,8 @@
+<h1>Добавление нового подразделения</h1>
+<form>
+    <div class="form-group">
+        <label for="name">Название</label>
+        <input type="text" id="name" name="name" [(ngModel)]="division.name">
+    </div>
+    <button class="btn btn-default" (click)="createDivision()">Добавить</button>
+</form>

@@ -1,0 +1,10 @@
+<div *ngIf="division">
+    <h1>Подразделение № {{division.id}} {{division.name}}</h1>
+    <form>
+        <div class="form-group">
+            <label for="name">Название подразделения</label>
+            <input type="text" name="name" class="form-control" id="name" [(ngModel)]="division.name" >
+        </div>
+        <button class="btn btn-default" (click)="updateDivision()">Обновить</button>
+    </form>
+</div>

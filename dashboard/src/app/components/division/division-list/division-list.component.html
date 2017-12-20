@@ -1,0 +1,16 @@
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" id="example" class="display" cellspacing="0" width="100%">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Имя</th>
+        <th>Действия</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let division of divisions" (dblclick)="getDivision(division.id)">
+        <td>{{division.id}}</td>
+        <td>{{division.name}}</td>
+        <td><button class="btn btn-default btn-sm" (click)="removeDivision(division.id)">Удалить</button></td>
+    </tr>
+    </tbody>
+</table>
